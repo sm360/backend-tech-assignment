@@ -24,6 +24,8 @@ Please note that the number of published listings for a dealer should be less or
   - return an error to the client, or 
   - publish a listing, but unpublish the oldest listing of a dealer to conform to the tier limit.
 
+Come up with an additional functionality of your choice that could give value to the service.
+
 ## Notes
 
  - Our tech stack is mostly Java with Spring framework.
