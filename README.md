@@ -4,11 +4,11 @@ Implement a REST service for managing listings for online advertising service.
 
 ## Terminology
 
- - **Listing** - a vehicle ad, usually consists of information about a vehicle and some other information, like who is selling a car, price, posting date, etc. Listing can be in one of two possible states:
-   - published - available online or 
-   - draft - not available online.
- - **Car Dealer** - a business that sells new or used cars. 
- - **Tier Limit** - a number of published listings a dealer can have online. 
+ - **Listing** - a vehicle advertisement. Listing can be in one of two possible states:
+   - published - available online 
+   - draft - not available online
+ - **Car Dealer** - an owner of the advertisement 
+ - **Tier Limit** - a number of published listings a dealer can have online 
 
 ## Requirements
 
@@ -24,7 +24,26 @@ Please note that the number of published listings for a dealer should be less or
   - return an error to the client, or 
   - publish a listing, but unpublish the oldest listing of a dealer to conform to the tier limit.
 
-Come up with an additional functionality of your choice that could give value to the service.
+Implementation of dealer configuration logic is up to you.
+
+Keep the implemnetation simple and provide comments during the code review interview with any improvement suggestions or any additional functionality of your choice that could give value to the service.
+
+### Minimum Entities Schema
+In order to facilitate the design, you can keep your schema simple, following the below as suggested minimum for this assignment:
+```
+Listing:
+  - id: uuid
+  - dealerId: uuid
+  - vehicle: string
+  - price: number
+  - createdAt: date
+  - state: draft/published
+  
+Dealer:
+ - id: uuid
+ - name: string
+```
+
 
 ## Notes
 
